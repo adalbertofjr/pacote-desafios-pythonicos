@@ -11,14 +11,12 @@ e donuts(23) retorna 'Number of donuts: many'
 
 def donuts(count):
     # +++ SUA SOLUÇÃO +++
-    msg = ''
     if count >= 10:
         msg = 'many'
     else:
         msg = count
 
     return 'Number of donuts: {0}'.format(msg)
-
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 def test(f, in_, expected):
