@@ -8,20 +8,20 @@ por 'good' e retorne a string resultante.
 
 Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
-from re import sub, match
+from re import sub, match, findall
 
 def not_bad(s):
     # +++ SUA SOLUÇÃO +++
-    if 'not' in s and 'bad' in s:
-        not_index = s.find('not')
-        bad_index = s.find('bad')
+    # if 'not' in s and 'bad' in s:
+    #     not_index = s.find('not')
+    #     bad_index = s.find('bad')
+    #
+    #     if not_index < bad_index:
+    #         not_split = s.split('not')
+    #         bad_split = s.split('bad')
+    #         s = not_split[0] + not_split[1].replace(not_split[1], 'good' + bad_split[1])
 
-        if not_index < bad_index:
-            not_split = s.split('not')
-            bad_split = s.split('bad')
-            s = not_split[0] + not_split[1].replace(not_split[1], 'good' + bad_split[1])
-
-    return s
+    return sub(r'not.*bad', 'good', s)
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 def test(f, in_, expected):
