@@ -8,6 +8,7 @@ por 'good' e retorne a string resultante.
 
 Exemplo: 'The dinner is not that bad!' retorna 'The dinner is good!'
 """
+from re import sub, match
 
 def not_bad(s):
     # +++ SUA SOLUÇÃO +++
