@@ -7,14 +7,18 @@ e o último caracteres da cadeia são os mesmos.
 
 PS: Python não possui o operador ++, porém += funciona.
 """
+from re import findall
 
 def match_ends(words):
     # +++ SUA SOLUÇÃO +++
-    return
+    values = []
+    for w in (w for w in words if w):
+        values += findall(fr"^{w[0]}.*{w[0]}$", w)
+
+    return len(values)
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
-
 def test(f, in_, expected):
     """
     Executa a função f com o parâmetro in_ e compara o resultado com expected.
