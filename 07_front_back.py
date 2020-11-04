@@ -10,13 +10,18 @@ Exemplo: 'abcde', a metade da frente é 'abc' e a de trás é 'de'.
 Finalmente, dadas duas strings a e b, retorne uma string na forma:
 a-frente + b-frente + a-trás + b-trás
 """
-def front_back(a, b):
-    # +++ SUA SOLUÇÃO +++
-    return
+from math import ceil
 
+def front_back(a, b):
+    a_values = divide_string(a)
+    b_values = divide_string(b)
+
+    return b_values[0].join(a_values) + b_values[1]
+
+def divide_string(s):
+    return (s[:ceil(len(s)/2)], s[ceil(len(s)/2):])
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
-
 def test(f, in_, expected):
     """
     Executa a função f com o parâmetro in_ e compara o resultado com expected.
@@ -36,6 +41,6 @@ def test(f, in_, expected):
 
 if __name__ == '__main__':
     # Testes que verificam o resultado do seu código em alguns cenários.
-    test(front_back, ('abcd', 'xy'), 'abxcdy')
+    test(front_back, ('abcd', 'xy'), 'abxcdy')  # a-frente + b-frente + a-trás + b-trás (ab + x + cd + y)
     test(front_back, ('abcde', 'xyz'), 'abcxydez')
     test(front_back, ('Kitten', 'Donut'), 'KitDontenut')

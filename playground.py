@@ -1,34 +1,35 @@
 from re import match, search, findall, MULTILINE
 
 if __name__ == '__main__':
-    text = 'This movie is not so bad'
-    print(search('.', text))
-    text = '\nThis movie is not so bad'
-    print(search('.', text))
-    print('\n')
-
-    text = 'This movie is not so bad'
-    print(findall('.', text))
-    print(findall('^.', text))
-    print('\n')
-
-    text = 'This movie\nis not\nso bad'
-    print(findall('.', text))
-    print(findall('^.', text))
-    print(findall('^.', text, MULTILINE))
-    print(findall('.$', text))
-    print(findall('.$', text, MULTILINE))
-
-    print('\n')
-    # Classes de caracteres
-    print(findall('[aeiou]', 'Adalberto Fernandes'))  # [aeiou -> classe de caracteres]
-    print(findall('[aeiou]', 'Adalberto Fernandes'))  # [aeiou] -> come se fosse ou
-    print(findall('[^aeiou]', 'Adalberto Fernandes'))  # [^aeiou] -> diferente destes caracteres
-    print(findall('[a-f]', 'Adalberto Fernandes'))  # de a a f
-    print(findall('[a-fA-Z]', 'Adalberto Fernandes'))  # de a a f minúsculo e de A a Z maiúsculo
-    print(findall('[a-zA-Z0-9_]', 'Adalberto Fernandes_2'))  # de a a z, de A a Z, de 0 a 9 e _
-    print(findall('[\w]', 'Adalberto Fernandes_2'))  # o mesmo que o de cima
-    print(findall('\w', 'Adalberto Fernandes_2'))  # o mesmo que o de cima
+    pass
+    # text = 'This movie is not so bad'
+    # print(search('.', text))
+    # text = '\nThis movie is not so bad'
+    # print(search('.', text))
+    # print('\n')
+    #
+    # text = 'This movie is not so bad'
+    # print(findall('.', text))
+    # print(findall('^.', text))
+    # print('\n')
+    #
+    # text = 'This movie\nis not\nso bad'
+    # print(findall('.', text))
+    # print(findall('^.', text))
+    # print(findall('^.', text, MULTILINE))
+    # print(findall('.$', text))
+    # print(findall('.$', text, MULTILINE))
+    #
+    # print('\n')
+    # # Classes de caracteres
+    # print(findall('[aeiou]', 'Adalberto Fernandes'))  # [aeiou -> classe de caracteres]
+    # print(findall('[aeiou]', 'Adalberto Fernandes'))  # [aeiou] -> come se fosse ou
+    # print(findall('[^aeiou]', 'Adalberto Fernandes'))  # [^aeiou] -> diferente destes caracteres
+    # print(findall('[a-f]', 'Adalberto Fernandes'))  # de a a f
+    # print(findall('[a-fA-Z]', 'Adalberto Fernandes'))  # de a a f minúsculo e de A a Z maiúsculo
+    # print(findall('[a-zA-Z0-9_]', 'Adalberto Fernandes_2'))  # de a a z, de A a Z, de 0 a 9 e _
+    # print(findall('[\w]', 'Adalberto Fernandes_2'))  # o mesmo que o de cima
+    # print(findall('\w', 'Adalberto Fernandes_2'))  # o mesmo que o de cima
 
     # Sequências especiais
 
